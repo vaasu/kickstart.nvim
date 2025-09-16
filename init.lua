@@ -102,7 +102,7 @@ vim.g.have_nerd_font = false
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.o.relativenumber = true
+--  vim.o.relativenumber = false
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
@@ -246,6 +246,15 @@ rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
+  -- just load stuff from lua/custom/plugins folder.
+  spec = {
+      -- add LazyVim and import its plugins
+      { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+      -- import/override with your plugins
+      -- 'custom.plugin' is pointing to .config/nvim/lua/custom/plugins folder
+      { import = "custom.plugins" },
+    },
+
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
