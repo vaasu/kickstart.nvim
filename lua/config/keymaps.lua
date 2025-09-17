@@ -3,10 +3,10 @@
 -- Add any additional keymaps here
 
 -- configure escape key and colon
- vim.keymap.set("n", ";", ":")
- vim.keymap.set("i", "jk", "<Esc>")
- vim.keymap.set("i", "kj", "<Esc>")
- vim.keymap.set("i", "KJ", "<Esc>")
- vim.keymap.set("i", "JK", "<Esc>")
- vim.keymap.set("n", "[", ":bpr <cr>")
- vim.keymap.set("n", "]", ":bnext <cr>")
+vim.keymap.set('n', ';', ':')
+vim.keymap.set('i', 'jk', '<Esc>')
+vim.keymap.set('i', 'kj', '<Esc>')
+vim.keymap.set('i', 'KJ', '<Esc>')
+vim.keymap.set('i', 'JK', '<Esc>')
+-- vim.keymap.set("n", "[", ":bpr <cr>")
+-- vim.keymap.set("n", "]", ":bnext <cr>")
